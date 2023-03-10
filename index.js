@@ -16,9 +16,11 @@ The function should:
 */
 
 
-function createMenuItem(/*Your code here*/){
-  /*Your code here*/
+function createMenuItem(name, price, category){
+    return{name,price,category}
 }
+
+  console.log(createMenuItem('tacos', 8, 'Lunch'));
 
 
 
@@ -32,6 +34,9 @@ Test your createMenuItems function by doing the following:
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
 
+console.log(createMenuItem('Pizza', 10, 'Lunch'));
+console.log(createMenuItem('Pasta', 15, 'Lunch'));
+console.log(createMenuItem('Steak', 20, 'Lunch'));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -48,13 +53,19 @@ Using the burger object below do the following:
 
 
 const burger = {
+
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  
+  discount: function(person){
+if (person === 'teacher' || person === 'student'){
+  return this.price * .75;
+} else if (person === 'public')
+ return this.price * .90;
+  }
 }
 
-
+console.log(burger.discount('public'));
 
 ///////////////Reviews (MVP)///////////////////
 const reviews = [
@@ -73,6 +84,7 @@ Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
 
+console.log(reviews[5]);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 (not auto-tested): 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -81,6 +93,7 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   2. log the reviews array to the console to check your work
 */
 
+  
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
