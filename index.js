@@ -110,11 +110,13 @@ Use the addReview function below to do the following:
   4. Return the updated array
 */
 
-
 function addReview(array, name, rating, feedback){
-  return `${array.name,array.rating, array.feedback}`;
-}
-console.log(addReview(reviews, 'Billy', 3, 'Lame food!'));
+reviews.push({array,name,rating,feedback});
+return reviews;
+};
+
+
+console.log(addReview(reviews, 'Daniela', 5, 'Great Eats!'));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -149,7 +151,7 @@ Use the getLastReview function below to do the following:
 
 
 function getLastReview(array) {
-    return `${array[array.length - 1].name} gave the restaurant a ${array[array.length - 1].rating} star review, and their feedback was: ${array[array.length -1].feedback}`;
+    return `${array[array.length - 1].name} gave the restaurant a ${array[array.length - 1].rating} star review, and their feedback was: ${array[array.length - 1].feedback}`;
 }
 
 console.log(getLastReview(reviews));
